@@ -5,11 +5,11 @@ What we envisioned was a testing facility where many robots running on testbeds 
 
 ![Workstation](./img/workstation.jpg "Workstation")
 
-Example test workstation
-
 ![Testbed](./img/testbed.jpg "Testbed")
 
-Example testbed
+There were a *lot* challenges with this project.  Getting the cloud set up, onboarding robots, and building the data pipeline were some highlights.  Thankfully I had a great team and we overcame each obstacle one by one.
+
+Alas, I don't have any photos of the application (which, while complex, was really neat) and the code is iRobot's IP.  However, I can build a mini-version that outlines some things I talked about with Nate.
 
 # BD Robot Events
 A demonstration of how to create tools that allow users to
