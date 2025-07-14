@@ -1,8 +1,8 @@
 # Testing Roombas at iRobot
 
-![Workstation]./img/workstation.jpg "Workstation")
+![Workstation](./img/workstation.jpg "Workstation")
 
-![Testbed]./img/testbed.jpg "Testbed")
+![Testbed](./img/testbed.jpg "Testbed")
 
 # BD Robot Events
 A demonstration of how to create tools that allow users to
