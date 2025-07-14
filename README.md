@@ -1,8 +1,13 @@
-# Testing Roombas at iRobot
+# Testing Roombas at iRobot - Challenges and Solutions
+At iRobot a lot of our Roomba reliability testing was manual.  An engineer would physically baby-sit robots through missions and would read the resulting data directly from the robots when they were done.  Given that the robots constantly "talked" to the cloud (at least in production), there seemed room to automate the process with the ultimate goal of moving the testing offshore, either to Mexico or China.
+
+What we envisioned was a testing facility where many robots running on testbeds could be monitored by a technician at a workstation using a web interface.  Using the web interface, the technician could easily see when robots were stuck, out of batteries or broken and move to address the problem.  Additionally, we set up our own testing cloud to capture all of the events the robots were reporting in order to derive metrics like mean-time-to-failure, mean-battery-life, etc.
 
 ![Workstation](./img/workstation.jpg "Workstation")
+Example test workstation
 
 ![Testbed](./img/testbed.jpg "Testbed")
+Example testbed
 
 # BD Robot Events
 A demonstration of how to create tools that allow users to
