@@ -4,9 +4,11 @@ At iRobot a lot of our Roomba reliability testing was manual.  An engineer would
 What we envisioned was a testing facility where many robots running on testbeds could be monitored by a technician at a workstation using a web interface.  Using the web interface, the technician could easily see when robots were stuck, out of batteries or broken and move to address the problem.  Additionally, we set up our own testing cloud to capture all of the events the robots were reporting in order to derive metrics like mean-time-to-failure, mean-battery-life, etc.
 
 ![Workstation](./img/workstation.jpg "Workstation")
+
 Example test workstation
 
 ![Testbed](./img/testbed.jpg "Testbed")
+
 Example testbed
 
 # BD Robot Events
