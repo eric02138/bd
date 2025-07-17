@@ -81,7 +81,7 @@ Right.  Let's fire it up.
 
 These choices are driven by the needs of the user and the organization, *not* by technology.
 
-The filter controls *could* have been written in a more traditional way, such that every filter change hit an API endpoint and returned a new database result.  But this would be slower for the user and would unnecessarily tax the database.
+The filter controls *could* have been written in a more traditional way, such that every filter change hit an API endpoint and returned a new database result.  But this technique would be slower for the user and would unnecessarily tax the database.
 
 The export function *could* have been part of the front-end code, and this would, in fact, be faster than using an API call.  But that would mean this export would only be useful for the current user.  By using a GET API call, the dataset becomes shareable across the organization.  For example
 
