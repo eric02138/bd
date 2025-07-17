@@ -1,7 +1,7 @@
 import { Search, Download, Calendar, Filter } from 'lucide-react';
 
 // Filter Controls Component
-const FilterControls = ({ filters, onFilterChange, onClearFilters, recordCount, totalCount, onExportJSON, onExportCSV, user, onLogout }) => {
+const FilterControls = ({ filters, onFilterChange, onClearFilters, recordCount, totalCount, onExportJSON, onExportCSV }) => {
   return (
     <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -10,10 +10,22 @@ const FilterControls = ({ filters, onFilterChange, onClearFilters, recordCount, 
           <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
           <input
             type="text"
-            placeholder="Search by name..."
+            placeholder="Search by robot..."
             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            value={filters.name}
-            onChange={(e) => onFilterChange('name', e.target.value)}
+            value={filters.robot}
+            onChange={(e) => onFilterChange('robot', e.target.value)}
+          />
+        </div>
+
+        {/* Description Search */}
+        <div className="relative">
+          <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search by description..."
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            value={filters.description}
+            onChange={(e) => onFilterChange('description', e.target.value)}
           />
         </div>
 
@@ -47,13 +59,14 @@ const FilterControls = ({ filters, onFilterChange, onClearFilters, recordCount, 
             value={filters.status}
             onChange={(e) => onFilterChange('status', e.target.value)}
           >
-            <option value="all">All Status</option>
+            <option value="">All</option>
             <option value="active">Active</option>
             <option value="inactive">Inactive</option>
             <option value="pending">Pending</option>
             <option value="maintenance">Maintenance</option>
           </select>
         </div>
+
       </div>
 
       {/* Filter Actions */}

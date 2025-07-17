@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Loader2, AlertCircle, Lock, User } from 'lucide-react';
 
 // Login Component
@@ -28,11 +28,8 @@ const LoginScreen = ({ onLogin, loading, error }) => {
             <Lock className="h-6 w-6 text-white" />
           </div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Sign in to your account
-          </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
             Access the Robot Events Viewer
-          </p>
+          </h2>
         </div>
         
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -105,11 +102,6 @@ const LoginScreen = ({ onLogin, loading, error }) => {
             </button>
           </div>
 
-          <div className="text-center">
-            <p className="text-xs text-gray-500">
-              Demo: Try username "admin" with password "password"
-            </p>
-          </div>
         </form>
       </div>
     </div>
