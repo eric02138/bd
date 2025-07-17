@@ -86,7 +86,9 @@ The filter controls *could* have been written in a more traditional way, such th
 The export function *could* have been part of the front-end code, and this would, in fact, be faster than using an API call.  But that would mean this export would only be useful for the current user.  By using a GET API call, the dataset becomes shareable across the organization.  For example
 
 > "Hey Bill, I think there's something wrong with Patsy.  Check out http://127.0.0.1:8000/v1/export_robot_event?robot=patsy&format=json"
+
 or 
+
 > "Looks like some robots were losing legs last week.  See http://127.0.0.1:8000/v1/export_robot_event?dateFrom=2025-07-09&dateTo=2025-07-10&format=json"
 
 ## APIs, Automation and YOU!
