@@ -93,7 +93,7 @@ or
 
 ## APIs, Automation and YOU!
 
-Going even further, an easily-accessable API with good/fine/barely passable documenation (http://127.0.0.1:8000/docs), can automate workflows.  Another script, program or API can use this API as input for further data processing.  
+Going even further, an easily-accessable API with good/fine/barely passable documenation (http://127.0.0.1:8000/docs), can allow other users in the organization to automate workflows.  Another script, program or API can use this API as input for further data processing.  
 
 This gets even more powerful if we add more inputs.  The National Oceanic and Atmospheric Association provides great APIs that both forecast weather for a given location and provide historical weather data for a given location.  So we could write a script that looks at our robot event data between July 9-11:
 
