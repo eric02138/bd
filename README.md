@@ -118,7 +118,9 @@ Notice that our API has that little `/v1` in the url.  That is there because API
 I had a great professor, [Bruce Molay](https://coursebrowser.dce.harvard.edu/course/introduction-to-c-unix-linux-programming-and-web-interfaces/), who taught a course on Unix programming.  He could do more in a single line than most people could do with a full program.  
 
 One of his main topics of discussion was the power of piping in shell scripting.  His point was that if a command  was written well, so that all of the possible inputs and outputs were known, you could use and reuse that command in conjunction with other commands.  For example:
+
     find . -type f -mtime 0 | xargs ls -lh | awk '{print $5, $9}'
+
 uses the `find` command with a required argument and a couple of optional arguments to get files that were modified today.  The `xargs` command takes the find output and lists `ls -lh` the files.  Finally, `awk` is used to print the fifth and ninth columns of the resulting list.  
 
 APIs should expose code in the same way.  With known inputs (path variables, post/put data, querystrings), a user should be able to expect known outputs.  These known outputs can then be used in other APIs that can yield deeper insights into data, automate processes, and create synergy.  Sorry.  I couldn't resist.
