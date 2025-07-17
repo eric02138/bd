@@ -33,10 +33,10 @@ Finally, we have a React app that presents a simple user interface so that users
 First, we will create some users.  MongoDB has a built-in USER_ROLES collection/table, and that allows very precise control over what users can and cannot do.  But it's overkill for this demo, so we can just create a "BDUser" collection.
 
     db.bduser.insertMany([
-        {name: "Arthur", robots: ["blackknight", "bridgekeeper", "patsy", ]},
-        {name: "Lancelot", robots: ["Zoot", "bridgekeeper", "patsy"]},
-        {name: "Galahad", robots: ["Zoot", "bridgekeeper", "patsy"]},
-        {name: "Robin", robots: ["Zoot", "bridgekeeper", "patsy"]}
+        {username: "Arthur", password: "kingofthewho", robots: ["blackknight", "bridgekeeper", "patsy", ]},
+        {username: "Lancelot", password: "youreinterribledanger", robots: ["Zoot", "bridgekeeper", "patsy"]},
+        {username: "Galahad", password: "ericidleindisguise", robots: ["Zoot", "bridgekeeper", "patsy"]},
+        {username: "Robin", password: "sirrobinranaway", robots: ["Zoot", "bridgekeeper", "patsy"]}
     ])
 
 Likewise, let's create some robot event data:
