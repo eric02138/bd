@@ -72,4 +72,4 @@ Right.  Let's fire it up.
 
     npm run dev                   *Runs React*
 
-<pause for applause...>
+\<pause for applause...\>
