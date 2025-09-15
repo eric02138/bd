@@ -152,7 +152,7 @@ const BDRobotsApp = () => {
             <div className="px-6 py-4 border-b border-gray-200">
               <div className="flex justify-between items-center">
                 <div>
-                  <h1 className="text-2xl font-bold text-gray-900">BD Robot Events</h1>
+                  <h1 className="text-2xl font-bold text-gray-900">Robot Events</h1>
                   <p className="text-gray-600 mt-1">Search, filter, and export robot events</p>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -174,13 +174,6 @@ const BDRobotsApp = () => {
                       <span className="text-sm">Using sample data</span>
                     </div>
                   )}
-                  <button
-                    onClick={fetchRobotEvents}
-                    disabled={loading}
-                    className="flex items-center px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200 disabled:opacity-50"
-                  >
-                    Refresh
-                  </button>
                 </div>
               </div>
             </div>

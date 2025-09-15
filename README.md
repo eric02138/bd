@@ -9,18 +9,18 @@ What we envisioned was a testing facility where many robots running on testbeds 
 
 There were a *lot* challenges with this project.  Getting the cloud set up, onboarding robots, and building the data pipeline were some highlights.  Thankfully I had a great team and we worked through each obstacle one by one.
 
-Unfortunately, I don't have any photos of the application (which, while complex, was really neat) and the code is iRobot's IP.  However, I can build a mini-version that outlines some things I talked about with Nate.
+Unfortunately, I don't have any photos of the application (which, while complex, was really neat) and the code is iRobot's IP.  However, I can build a mini-version that outlines some of the highlights.
 
-# BD Robot Events
+# Robot Events
 A demonstration of how to create tools that allow users to
 - easily find robot event data 
-- export the data for use with existing internal BD software tools
+- export the data for use with existing internal software tools
 - share their data across the organization
 
-Nate and I also talked about how to automate work in the future.  For example, rather than save the data locally, it would be great to send the data produced along to another API or script that mimicked the existing BD software.
+I also considered how automate work in the future.  For example, rather than save the data locally, it would be great to send the data produced along to another API or script that mimicked existing software.
 
 ## Keeping Things Simple
-This presentation is supposed to be short (20 minutes), so we are going to keep things dead simple.  That means no auth implementation, unit testing, containerization, etc.  You're all so terribly disappointed, I can tell.
+This presentation is supposed to be short, so we are going to keep things dead simple.  That means no auth implementation, unit testing, containerization, etc.  You're so terribly disappointed, I can tell.
 
 At the most basic level, this tool grants users access to a data store, in this case MongoDB.  In practice, the same techniques could be used to search log files or data from other APIs.  
 
@@ -30,9 +30,9 @@ Finally, we have a React app that presents a simple user interface so that users
 
 ## Data Generation
 
-First, we will create some users.  MongoDB has a built-in USER_ROLES collection/table, and that allows very precise control over what users can and cannot do.  But it's overkill for this demo, so we can just create a "BDUser" collection.
+First, we will create some users.  MongoDB has a built-in USER_ROLES collection/table, and that allows very precise control over what users can and cannot do.  But it's overkill for this demo, so we can just create a "User" collection.
 
-    db.bduser.insertMany([
+    db.user.insertMany([
         {username: "Arthur", password: "kingofthewho", robots: ["blackknight", "bridgekeeper", "patsy", ]},
         {username: "Lancelot", password: "youreinterribledanger", robots: ["Zoot", "bridgekeeper", "patsy"]},
         {username: "Galahad", password: "ericidleindisguise", robots: ["Zoot", "bridgekeeper", "patsy"]},
@@ -99,7 +99,7 @@ The resulting script becomes even more powerful as we add more API inputs.  The 
 
     http://127.0.0.1:8000/v1/export_robot_event?dateFrom=2025-07-09&dateTo=2025-07-11&format=json
 
-And see if it was raining in Waltham that day:
+And see if it was raining that day:
 
     https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&stationid=GHCND:USW00014739&startdate=2024-07-09&enddate=2024-07-11&datatypeid=TMAX,TMIN,PRCP  (requires access token, alas)
 
