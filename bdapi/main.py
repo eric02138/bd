@@ -1,3 +1,7 @@
+"""
+Very simple api
+"""
+
 import os
 import csv
 import io
@@ -227,7 +231,8 @@ async def get_export_robot_event_by_username(
     if dateTo:
         try:
             date_from_str = datetime.fromisoformat(dateTo)
-            # This seems silly.  There's gotta be a better way to avoid overwriting the createdAt filter...
+            # This seems silly.  There's gotta be a better way to
+            # avoid overwriting the createdAt filter...
             if not "createdAt" in filters:
                 filters.update({"createdAt": {"$gte": date_from_str}})
             else:
@@ -305,7 +310,8 @@ async def get_export_robot_event(
     if dateTo:
         try:
             date_from_str = datetime.fromisoformat(dateTo)
-            # This seems silly.  There's gotta be a better way to avoid overwriting the createdAt filter...
+            # Again, this seems silly.  There's gotta be a better way
+            # to avoid overwriting the createdAt filter...
             if not "createdAt" in filters:
                 filters.update({"createdAt": {"$gte": date_from_str}})
             else:
